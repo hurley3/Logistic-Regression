@@ -16,29 +16,6 @@ pip install numpy pandas scikit-learn
 ## Usage
 To use the logistic regression model, you will need to have a dataset with a binary outcome variable and one or more predictor variables. The model can be trained and evaluated using the provided LogisticRegression class.
 
-Here is an example of how to train and evaluate a logistic regression model on the pima-indians-diabetes dataset:
-
-```Python3
-from logistic_regression import LogisticRegression
-from sklearn.datasets import load_diabetes
-from sklearn.model_selection import train_test_split
-
-# Load the dataset
-X, y = load_diabetes(return_X_y=True)
-
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-
-# Create the logistic regression model
-model = LogisticRegression()
-
-# Train the model on the training data
-model.fit(X_train, y_train)
-
-# Evaluate the model on the testing data
-accuracy = model.score(X_test, y_test)
-print(f'Test accuracy: {accuracy:.2f}')
-```
 ## References
 [Introduction to Logistic Regression](https://towardsdatascience.com/introduction-to-logistic-regression-66248243c148)
 
